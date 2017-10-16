@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Hack Transfer Files</title>
-  </head>
-  <body>
-    <div>
-      Transfering ...
-    </div>
-    <div>
-       <a href="#" onclick="return sstop()" style="text-decoration: none">Cancel</a>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles2.css">
+</head>
+
+<body>
+    <div align="center">
+        <div class="transf">
+            <p class="load">Transfering... </p>
+        </div>
+        <div class="load"><img src="assets/img/loading.gif" width="200px"></div>
+        <div class="bttn">
+            <button class="btn btn-default" type="button" id="stophack">STOP TRANSFER</button>
+        </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -24,10 +32,16 @@
       socket.emit('stopTransfer');
     });
 
+    var stopButton = jQuery('#stophack');
+    stopButton.on('click', function () {
+       return sstop();
+    });
+
     function sstop () {
       socket.emit('stopTransfer');
       return false;
     }
     </script>
-  </body>
+</body>
+
 </html>

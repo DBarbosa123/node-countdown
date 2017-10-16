@@ -16,7 +16,7 @@ h1{
   color: white;
   margin-left: 20px;
   text-align:center;
-} 
+}
 div.rolldown{
   width:100%;
   float:left;
@@ -27,12 +27,12 @@ div.rolldown{
   margin-left:20px;
 }
 #messages .leak{
-  font-family:Verdana;
+  font-family:courier;
   font-size:22px;
   color: red;
 }
 #messages .texttow{
-  font-family:Verdana;
+  font-family:courier;
   font-size:18px;
   color: white;
 }

@@ -11,23 +11,27 @@ var io = socketIO(server);
 
 app.use(express.static(publicPath));
 
+// Start connection
 io.on('connection', (socket) => {
   console.log('New user connected');
 
-
+  // Emit Refresh
   socket.on('refreshCounter', () => {
     io.emit('doRefresh');
   });
 
+  // Emit stop transfer
   socket.on('stopTransfer', () => {
     io.emit('doStop');
   });
 
+  // Message on Disconnect
   socket.on('disconnect', () => {
     console.log('User was disconnected');
   });
 });
 
+// Server start command
 server.listen(port, () => {
   console.log(`Server is up on ${port}`);
 });
