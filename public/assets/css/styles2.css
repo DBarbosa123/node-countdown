@@ -9,6 +9,13 @@ p.lost {
   margin-left:30px;
 }
 
+p.lost2 {
+  font-size:72px;
+  color:#FF0000;
+  font-family:courier;
+  margin-left:30px;
+}
+
 div {
   margin-top:100px;
 }

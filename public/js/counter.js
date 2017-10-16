@@ -11,6 +11,8 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = 0;
+            setTimeout('youlost()',2000);
+            //return youlost();
         }
     }, 1000);
 }
@@ -20,3 +22,7 @@ window.onload = function () {
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
 };
+
+function youlost() {
+  window.location.href = '/youlost.html';
+}
