@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Connection Lost ...</title>
+  </head>
+  <body>
+    <div>Connection Lost ...</div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+  var socket = io();
+
+  socket.on('connect', function() {
+    console.log('Connected to Server');
+  });
+
+  socket.on('doRefresh', function() {
+    window.location.href = '/countdown.html'
+  });
+  </script>
+  </body>
+</html>

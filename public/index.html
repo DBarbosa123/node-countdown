@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>CountDown App</title>
-  </head>
-  <body>
-     <p>Welcome to the countdown app</p>    
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <div class="features-boxed">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Countdown </h2>
+                <p class="text-center">app</p>
+            </div>
+            <div class="row features">
+            	  <a href = "/countdown.html" style="text-decoration: none">
+                <div class="col-md-4 col-sm-6 item">
+                    <div class="box"><i class="glyphicon glyphicon-time icon"></i>
+                        <h3 class="name">Countdown </h3>
+                        <p class="description">Run the countdown clock.</p></div>
+                </div>
+                </a>
+                <a href = "/stophack.html" style="text-decoration: none">
+                <div class="col-md-4 col-sm-6 item">
+                    <div class="box"><i class="glyphicon glyphicon-ok icon"></i>
+                        <h3 class="name">Stop Counter Screen</h3>
+                        <p class="description">Screen to stop the counter</p></div>
+                </div>
+              </a>
+              <a href="#" onclick="return rrefresh()" style="text-decoration: none" >
+                <div class="col-md-4 col-sm-6 item">
+                    <div class="box"><i class="glyphicon glyphicon-remove icon"></i>
+                        <h3 class="name">Reset the Countdown</h3>
+                        <p class="description">Reset the countdown clock </p></div>
+                </div>
+              </a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
+
+</body>
+
 </html>
