@@ -13,8 +13,11 @@
 <body>
     <div align="center">
         <p align="left" class="lost tab blink">Zombie's connection stopped... YOU WIN</p>
+        <p></p>
+        <p align="left" id="timerclock" class="lost tab blink"></p>
     </div>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="/js/deparam.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
@@ -22,6 +25,9 @@
 
     socket.on('connect', function() {
       console.log('Connected to Server');
+      var params = jQuery.deparam(window.location.search);
+      $("#timerclock").text(params.timer);
+      // console.log(params.timer);
     });
 
     socket.on('doRefresh', function() {

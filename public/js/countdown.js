@@ -5,11 +5,13 @@ var socket = io();
 // });
 
 socket.on('doRefresh', function() {
+
   window.location.href = '/countdown.html'
 });
 
 socket.on('doStop', function() {
-  window.location.href = '/connlost.html'
+  var myValue = document.getElementById("timerclock").innerHTML;
+  window.location.href = `/connlost.html?timer=${myValue}`
 });
 
 socket.on('youLost', function() {
