@@ -25,6 +25,11 @@ io.on('connection', (socket) => {
     io.emit('doStop');
   });
 
+  // Emit stop transfer
+  socket.on('youLost', () => {
+    io.emit('youLost');
+  });
+
   // Message on Disconnect
   socket.on('disconnect', () => {
     console.log('User was disconnected');

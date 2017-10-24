@@ -11,3 +11,7 @@ socket.on('doRefresh', function() {
 socket.on('doStop', function() {
   window.location.href = '/connlost.html'
 });
+
+socket.on('youLost', function() {
+  window.location.href = '/youlost2.html'
+});
