@@ -1,3 +1,7 @@
+var sound = new Howl({
+  urls: ['sounds/bomb.mp3']
+}).play();
+
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -7,6 +11,9 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
+        if timer = 290 {
+          sound.play();
+        }
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
