@@ -1,6 +1,6 @@
-var sound = new Howl({
-  urls: ['sounds/bomb.mp3']
-}).play();
+var counter = new Howl({
+  src: ['sounds/counter.mp3']
+});
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -11,8 +11,8 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        if timer = 290 {
-          sound.play();
+        if (timer == 10) {
+          counter.play();
         }
         display.textContent = minutes + ":" + seconds;
 
@@ -25,7 +25,7 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var fiveMinutes = 60 * 5,
+    var fiveMinutes = 20,
         display = document.querySelector('#timerclock');
     startTimer(fiveMinutes, display);
 };
