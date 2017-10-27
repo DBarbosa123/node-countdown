@@ -1,7 +1,3 @@
-var counter = new Howl({
-  src: ['sounds/counter.mp3']
-});
-
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -25,7 +21,7 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var fiveMinutes = 20,
+    var fiveMinutes = 300,
         display = document.querySelector('#timerclock');
     startTimer(fiveMinutes, display);
 };
